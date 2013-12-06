@@ -1,0 +1,1023 @@
+<?php echo $header; ?>
+
+<link rel="stylesheet" href="<?=DIR_CSS?>prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+<script src="<?=DIR_JS?>jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script src="catalog/view/javascript/grafico/js/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/data.js"></script>
+<script src="catalog/view/javascript/grafico/js/modules/exporting.js"></script>
+
+
+
+<?php echo $column_left; ?>
+
+<script src="<?=URL_JAVASCRIPT?>jquery.hashchange.js" type="text/javascript"></script>
+<script src="<?=URL_JAVASCRIPT?>jquery.easytabs.js" type="text/javascript"></script>
+
+
+<!--script type="text/javascript">
+    $(function () {
+                $('#containerx').highcharts({
+                    chart: {
+                        type: 'line',
+                        marginRight: 130,
+                        marginBottom: 25,
+                        zoomType: 'x'
+                    },
+
+                    title: {
+                        text: 'Verbas idenizatórias',
+                        x: -20 //center
+                    },
+                    /*
+                    subtitle: {
+                        text: 'Source: WorldClimate.com',
+                        x: -20
+                    },
+                    */
+                    xAxis: {
+
+                            <?php
+                            $categorias = "";
+                foreach($verbasGrafico as $key=>$value)
+                {
+                    $categorias .= "'".$key."',";
+                }
+                $categorias = substr($categorias,0,-1);
+                ?>
+
+                categories: [<?=$categorias?>],
+                //tickInterval: 24*3600*1000
+            },
+            yAxis: {
+        title: {
+            text: 'R$'
+        },
+        plotLines: [{
+            value: 0,
+            width: 1,
+            color: '#808080'
+        }]
+    },
+    tooltip: {
+        valuePrefix: 'R$ '
+    },
+    legend: {
+        layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -10,
+                y: 100,
+                borderWidth: 0
+    },
+    series: [{
+        name: 'Valor por mês',
+            <?php
+            $valoresx = "";
+    foreach($verbasGrafico as $key=>$value)
+    {
+        $valoresx.= "".$value.",";
+    }
+    $valoresx = substr($valoresx,0,-1);
+    ?>
+
+    data: [<?=$valoresx?>]
+    },
+    {
+
+    name: 'Valor médio por mês',
+
+    <?php
+            $valoresx = "";
+    foreach($mediaVerbasGrafico as $key=>$value)
+    {
+        $valoresx.= "".$value.",";
+    }
+    $valoresx = substr($valoresx,0,-1);
+    ?>
+
+    data: [<?=$valoresx?>]
+    }
+    /*, {
+        name: 'Berlin',
+        data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+    }, {
+        name: 'London',
+        data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+    }
+    */]
+    });
+    });
+
+    var highchartsOptions = Highcharts.setOptions({
+                lang: {
+                    loading: 'Aguarde...',
+                    months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                    weekdays: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+                    shortMonths: ['Jan', 'Feb', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                    exportButtonTitle: "Exportar",
+                    printButtonTitle: "Imprimir",
+                    rangeSelectorFrom: "De",
+                    rangeSelectorTo: "Até",
+                    rangeSelectorZoom: "Periodo",
+                    downloadPNG: 'Download imagem PNG',
+                    downloadJPEG: 'Download imagem JPEG',
+                    downloadPDF: 'Download documento PDF',
+                    downloadSVG: 'Download imagem SVG'
+                    // resetZoom: "Reset",
+                    // resetZoomTitle: "Reset,
+                    // thousandsSep: ".",
+                    // decimalPoint: ','
+                }
+            }
+    );
+
+
+</script-->
+
+<script type="text/javascript" src="http://www.highcharts.com/highslide/highslide-full.min.js"></script>
+<script type="text/javascript" src="http://www.highcharts.com/highslide/highslide.config.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="http://www.highcharts.com/highslide/highslide.css" />
+
+<Script>
+    $(function () {
+        // Register a parser for the American date format used by Google
+        Highcharts.Data.prototype.dateFormats['d/m/Y'] = {
+            regex: '^([0-9]{1,2})\/([0-9]{1,2})\/([0-9]{2})$',
+            parser: function (match) {
+                return Date.UTC(+('20' + match[3]), match[1] - 1, +match[2]);
+            }
+        };
+
+        $.get('/revolucaobrasileira/rb/politico/politico/mediaVerbasPolitico?politicoId=<?=$politicos[0]['id']?>&casaId=<?=$politicos[0]['casaId']?>', function (csv) {
+
+            $('#containerx').highcharts({
+
+                data: {
+                    csv: csv
+                },
+
+                title: {
+                    text: 'Verbas idenizatórias'
+                },
+
+                subtitle: {
+                    text: 'Source: Google Analytics'
+                },
+
+                xAxis: {
+                    type: 'datetime',
+                    tickInterval: 24 * 3600 * 1000*365, // one week
+                    tickWidth: 0,
+                    gridLineWidth: 1,
+                    labels: {
+                        align: 'left',
+                        x: 3,
+                        y: -3
+                    }
+                },
+
+                yAxis: [{ // left y axis
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        align: 'left',
+                        x: 3,
+                        y: 16,
+                        formatter: function() {
+                            return 'R$ '+Highcharts.numberFormat(this.value, 0);
+                        }
+                    },
+                    showFirstLabel: false
+                }],
+
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'top',
+                    y: -20,
+                    x:0,
+                    floating: true,
+                    borderWidth: 0
+                },
+
+                tooltip: {
+                    shared: true,
+                    crosshairs: true,
+                    valuePrefix: 'R$ ',
+                    yDecimals: 2
+                },
+
+                plotOptions: {
+                    series: {
+                        cursor: 'pointer',
+                        point: {
+                            events: {
+                                click: function() {
+                                    hs.htmlExpand(null, {
+                                        pageOrigin: {
+                                            x: this.pageX,
+                                            y: this.pageY
+                                        },
+                                        headingText: this.series.name,
+                                        maincontentText: Highcharts.dateFormat('%b de %Y', this.x) +':<br/> '+
+                                                Math.round(this.y) +' visits',
+                                        width: 400
+                                    });
+                                }
+                            }
+                        },
+                        marker: {
+                            lineWidth: 1
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: 'Valor gasto',
+                        visible: true,
+
+                    },
+                    {
+                        name: 'Média',
+                        visible: true
+                    }
+                ]
+
+            });
+        });
+
+    });
+
+    var highchartsOptions = Highcharts.setOptions({
+                lang: {
+                    loading: 'Aguarde...',
+                    months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                    weekdays: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+                    shortMonths: ['Jan', 'Feb', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                    exportButtonTitle: "Exportar",
+                    printButtonTitle: "Imprimir",
+                    rangeSelectorFrom: "De",
+                    rangeSelectorTo: "Até",
+                    rangeSelectorZoom: "Periodo",
+                    downloadPNG: 'Download imagem PNG',
+                    downloadJPEG: 'Download imagem JPEG',
+                    downloadPDF: 'Download documento PDF',
+                    downloadSVG: 'Download imagem SVG',
+                    // resetZoom: "Reset",
+                    // resetZoomTitle: "Reset,
+                     thousandsSep: ".",
+                     decimalPoint: ','
+                }
+            }
+    );
+</Script>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('#tab-container').easytabs({'updateHash':false});
+    });
+</script>
+
+<?
+
+$classLike = "";
+$onLike = "";
+$pref = "";
+$onDeslike = "";
+$prefDes = "";
+$onDeslike = "";
+$classDeslike = "";
+
+if(isset($_SESSION['customer_id']))
+{
+
+	 if(isset($_SESSION['votos']['like']['politico']) and in_Array($politicos[0]['id'],$_SESSION['votos']['like']['politico']))
+	 {
+		$onLike = "on";
+		$classLike = "likeon";
+		$pref = "un";
+	 }
+	 else
+	 {
+		$onLike ="";
+		$classLike = "like";
+		$pref = "";
+	 }
+	 
+	 if(isset($_SESSION['votos']['deslike']['politico']) and in_Array($politicos[0]['id'],$_SESSION['votos']['deslike']['politico']))
+	 {
+		$onDeslike = "on";
+		$classDeslike = "deslikeon";
+		$prefDes = "un";
+	 }
+	 else
+	 {
+		$onDeslike ="";
+		$classDeslike = "deslike";
+		$prefDes = "";
+	 }
+ 
+ }
+
+
+?>
+					
+
+<link href="<?=URL_TEMPLATE?>static/css/politico.css" rel="stylesheet" type="text/css" />
+
+<link href="<?=URL_TEMPLATE?>static/css/tabs.css" rel="stylesheet" type="text/css" />
+
+
+
+<div class="politico">   
+			<div class="wall">   
+					
+					<!--h1 class="name"><?=$politicos[0]['apelido']?> - <?=$politicos[0]['partidoNome']?></h1><BR-->
+					<?
+					if(count($casa_badges)> 0)
+						{
+							print "EXIJA mais transparência da <a href=politico/politico?casaId=".$politicos[0]['casaId'].">".$politicos[0]['casaNome']."</a>.<BR> Atualmente os seguintes dados não estão disponíveis de forma satisfatória.<BR>";
+							foreach($casa_badges as $key=>$value)
+							{
+								print $casa_badges[$key]['descricao']."<BR>"; 
+							}
+						}
+						else
+						{
+						?>
+						<a href=politico/politico?casaId=<?=$politicos[0]['casaId']?>><?=$politicos[0]['casaNome']?></a> 
+						<?
+						}
+						?>
+                      <BR> O <?=$politicos[0]['uf_descricao']?> é o <?=$transparencia[0]['rank']?>º colocado no <a href="politico/politico/rank?rank=transparencia">ranking de transparência</a>.
+
+
+
+					<!-- badges -->   
+					<div class="share-etc">
+
+
+                        <a href="javascript:votar(<?=$politicos[0]['id']?>,'<?=$pref?>like','politico')" id="like<?=$politicos[0]['id']?>" class="<?=$classLike?>">Curtiu?</a> <?=$politicos[0]['like']?>
+                        <a href="javascript:votar(<?=$politicos[0]['id']?>,'<?=$prefDes?>deslike','politico')" id="deslike<?=$politicos[0]['id']?>" class="<?=$classDeslike?>">Não curtiu?</a> <?=$politicos[0]['deslike']?>
+
+                        <div class="comments">123</div>
+						<div class="trend">123</div>
+
+					</div>
+					<!-- badges -->
+									  
+					<!-- share -->  
+					<div class="share">
+						<div class="facebook">
+							<!--iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fglobo.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true" id="childframe"></iframe-->
+						</div>
+						
+						<div class="twitter">
+							<a href="https://twitter.com/share" class="twitter-share-button" data-lang="pt">Tweetar</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</div>
+						
+					</div>
+					<!-- share -->
+					
+					<!-- bio -->  
+					<div class="bio">
+					
+						<p>
+
+						<?php
+						if($politicos[0]['politicoCargoAnterior'] != "")
+						{
+							print "<B>Passado</b><BR>Era ".$politicos[0]['politicoCargoAnterior'];
+						}
+						
+						if($politicos[0]['politicoCargoRelevante'] != "")
+						{
+							print $politicos[0]['politicoCargoRelevante']."<BR>";
+						}
+						?>
+						<?
+						print "<B>Perfil</b><BR>".$politicos[0]['politicoOutrosDados']?>
+						
+						<?
+						if($politicos[0]['badgeBens'] < 50 and $politicos[0]['badgeBens'] != "")
+						print "<BR><BR>! Esse politico esta entre as 50 declarações mais altas de bens.";
+						 
+						if($politicos[0]['badgeProcessos'] < 50 and $politicos[0]['badgeProcessos'] != "")
+						print "<BR><BR>! Esse politico esta entre as 50 com mais processos na justiça.";
+						
+						if($politicos[0]['badgeVerbas'] < 50 and $politicos[0]['badgeVerbas'] != "")
+						print "<BR><BR>! Esse politico esta entre as 50 com mais uso de verbas!";
+
+                        foreach($bancada as $key=>$value)
+                            print "<BR><a href='politico/bancada?idGrupo=".$bancada[$key]['idGrupo']."'>".$bancada[$key]['grupo']."</a>";
+						
+						if($politicos[0]['politicoEmail'] != "")
+						print "<BR><BR>! Email: ".$politicos[0]['politicoEmail']; 
+												
+						?>
+						
+						<!--a href="#" class="wikipedia">Veja mais na Wikip�dia</a-->  
+		
+<?				
+print '<ul><li class="avaliacao">';                        
+print '</li></ul>';
+?>
+
+
+                    </div>
+					<!-- bio -->
+
+                    <div id="tab-container" class="tab-container">
+
+                    <!-- Gráfico -->
+                    <div class="graphic">
+                        <div id="containerx" style="min-width: 200px; height: 200px; margin: 0 auto"></div>
+                    </div>
+                    <!-- Gráfico -->
+                        <ul class='etabs'>
+
+
+                            <li class='tab'><a href="#tabs1-html" class="history">Notícias<BR>
+                            <?
+                            if(count($materias) > 1)
+                            {
+                            ?><?=count($materias)?> Esse mês
+                            <?
+                            }
+                            else
+                            {
+                            ?>
+                            Nenhuma esse mês
+                            <?
+                            }
+                            ?>
+                            </a></li>
+
+                            <li class='tab'><a href="#tabs1-assiduidade" class="history">Assiduidade<BR>
+                                <?
+                            if(count($assiduidade) >= 1)
+                                {
+                                ?>
+                                <?=$assiduidade[0]['ausencias']?> faltas
+                                <?=$assiduidade[0]['rank']?>º colocado
+                                <?
+                            }
+                            else
+                            {
+                            ?>
+                                Sem dados
+                                <?
+                            }
+                            ?>
+                            </a></li>
+
+
+
+                            <li class='tab'><a href="#tabs1-js" class="history">
+
+                            <?
+                            if($totalBens >  0)
+                            {
+                            ?>
+                                Bens R$ <?=number_format($totalBens,2,",",".")?><BR> <?=$politicos[0]['badgeBens']?>ª lugar no ranking </a>
+
+                             <?
+                             }
+                             else
+                             {
+                             ?>
+                                Bens <BR>Não declarados.</a>
+                             <?
+                             }
+                            ?>
+
+                            </li>
+                            <li class='tab'><a href="#tabs1-css" class="history">Casos corrupção<BR>
+                            <?
+							if((count($corrupcao) > 0))
+                                {
+                                    if((count($corrupcao) > 1))
+                                    {
+                                        print count($corrupcao)." casos";
+                                    }
+                                    else
+                                    {
+                                        print count($corrupcao)." caso";
+                                    }
+                                }
+                                else
+                                {
+                                print "Nenhum envolvimento";
+                                }
+
+                                ?></a></li>
+                            <li class='tab'><a href="#tabs1-verbas" class="history">Verbas idenizatórias R$ <?=number_format($totalVerbas,2,",",".")?><BR> <?=$politicos[0]['badgeVerbas']?>ª lugar no raking</a></li>
+                            <li class='tab'><a href="#tabs1-justica" class="history">
+
+                                <?
+                                if((count($processos) > 0))
+                                {
+                                ?> <?=count($processos)?> citações na Justiça<BR>
+                                <?
+                                }
+                                else
+                                {
+                                    print "Nenhuma sitação na justiça";
+                                }
+                                ?>
+                                <?
+                                if($politicos[0]['badgeProcessos'] != 0)
+                                {
+                                    print $politicos[0]['badgeProcessos']."º no ranking geral";
+                                }
+
+                                ?></a></li>
+
+                            <li class='tab'><a href="#tabs1-votos" class="history">Como votou</li>
+
+                        </ul>
+
+
+                        <div id="tabs1-html">
+                            <div class="container">
+                                <div class="item news">
+
+                                    <?
+                                    if(is_array($materias))
+                                    foreach($materias as $key=>$value)
+                                    {
+                                    ?>
+                                    <dl>
+                                        <dt><a href="#"><a href="materias/materias?materia_id=<?=$materias[$key]['id']?>"><?=$materias[$key]['titulo']?></a></dt>
+                                        <dd><a href="#"><?=$materias[$key]['nome']?> em <?=$materias[$key]['data']?></a></dd>
+                                    </dl>
+                                    <div class="see-more">
+                                        <a href="materias/materias"><?=$veja_mais_txt?></a>
+                                    </div>
+                                    <?
+                                    }
+                                    else
+                                    {
+                                    ?>
+                                    Nenhuma matéria.
+                                    <?
+                                    }
+                                    ?>
+
+                                </div>
+                                <!-- content -->
+                            </div>
+                        </div>
+
+                        <div id="tabs1-assiduidade">
+                            <div class="container">
+                                <div class="item news">
+
+                                    <?
+                                    if(is_array($assiduidade))
+                                    foreach($assiduidade as $key=>$value)
+                                    {
+                                    ?>
+                                    <dl>
+                                        <dt>Ano:<?=$assiduidade[$key]['ano']?>
+                                            Sessoes: <?=$assiduidade[$key]['sessoes']?></dt>
+                                        <dd>Ausencias <?=$assiduidade[$key]['ausencias']?> (<?=$assiduidade[$key]['justificadas']?> justificadas, <?=$assiduidade[$key]['injustificadas']?> injustificada)</dd>
+                                    </dl>
+                                    <div class="see-more">
+                                        <a href="politico/politico/rank?rank=assiduidade"><?=$veja_mais_txt?></a>
+                                    </div>
+                                    <?
+                                    }
+                                    else
+                                    {
+                                    ?>
+                                    Não existem dados.
+                                    <?
+                                    }
+                                    ?>
+
+                                </div>
+                                <!-- content -->
+                            </div>
+                        </div>
+
+
+                        <div id="tabs1-js">
+                        <div class="container">
+                            <div class="item bens">
+                                <?
+
+                                if(count($bens) > 0)
+                                {
+
+                                    foreach($bens as $key=>$value)
+                                    {
+
+                                    ?>
+                                    <dl>
+                                        <dt><a href="#"><?=$bens[$key]['bem']?></a></dt>
+                                        <dd><a href="#">R$ <?=number_format($bens[$key]['valor'],2,",",".")?></a></dd>
+                                    </dl>
+                                    <?
+                                    }
+                                }
+                                else
+                                {
+                                ?>
+                                <dl>
+                                    <dt>Bens não disponíveis</dt>
+                                </dl>
+                                <?
+                                }
+
+							?>
+                                <div class="see-more">
+                                    <a href="politico/politico/rank?rank=bens"><?=$veja_mais_txt?></a>
+                                </div>
+
+                            </div>
+                            <!-- item -->
+
+                            <!-- content -->
+                        </div>
+                        </div>
+
+
+                        <div id="tabs1-css">
+                            <div class="container">
+                              <div class="item bens">
+                                 <?
+							if((count($corrupcao) > 0))
+                                {
+                                ?>
+
+                                <?
+							foreach($corrupcao as $key=>$value)
+                                {
+                                ?>
+                                <dl>
+                                    <dt><a href="#">
+                                        <tr><td><a href=conteudo/corrupcao?corrupcao_id=<?=$corrupcao[$key]['corrupcaoId']?>><?=$corrupcao[$key]['corrupcaoTitulo']?></a></dt>
+                                    <dd></dd>
+                                </dl>
+                                <?
+							}
+							}
+							else
+							{
+							?>
+                                <dl><dt>Esse político não se envolveu em nenhum caso de corrupção ou esse dado não está disponível</dt></dl>
+                                <?
+							}
+							?>
+                                <div class="see-more">
+                                    <a href="politico/politico/rank?rank=corrupcao"><?=$veja_mais_txt?></a>
+                                </div>
+
+                        </div><!-- item -->
+
+
+
+
+
+                        </div>
+                        <!-- container -->
+                            <!-- content -->
+                        </div>
+
+
+                        <div id="tabs1-verbas">
+                            <!-- content -->
+                            <div class="container">
+
+                                <?
+                                if(isset($verbas))
+                                {
+                                ?>
+
+                                        <div class="item verbas">
+
+                                            <?
+                                $totalVerbas = 0;
+
+                                foreach($verbas as $key=>$value)
+                                            {
+                                            $totalVerbas = $verbas[$key]['verba']+$totalVerbas;
+                                            }
+                                            ?>
+
+                                            <?
+                                    foreach($verbas as $key=>$value)
+                                            {
+                                            if(trim($verbas[$key]['verba']) != "R$ 0,00")
+                                            {
+                                            ?>
+                                            <dl>
+                                                <dt><a href="#"><?=$verbas[$key]['descricao']?></a></dt>
+                                                <dd><a href="#">R$ <?=number_format($verbas[$key]['verba'],2,",",".")?></a></dd>
+                                            </dl>
+                                            <?
+                                        }
+                                    }
+                                    ?>
+
+                                    <div class="see-more">
+                                        <a href="politico/politico/rank?rank=verbas"><?=$veja_mais_txt?></a>
+                                    </div>
+                                            <?
+                                            }
+                                            ?>
+                                  * dados de 2011. Um novo rank mais atual está sendo elaborado.
+                                </div>
+                                <!-- item -->
+
+                            <!-- content -->
+                        </div>
+                        </div>
+
+                        <div id="tabs1-justica">
+                            <!-- content -->
+                            <div class="container">
+
+                                <div class="item processos">
+                                                <?
+                                        if((count($processos) > 0))
+                                                {
+                                                ?>
+
+                                                <?
+                                        foreach($processos as $key=>$value)
+                                                {
+                                                ?>
+
+                                                <dl>
+                                                    <dt><?=$processos[$key]['descricao']?>
+
+                                                        <?
+                                            if($processos[$key]['link'] != "")
+                                            {
+                                            print "<a href=".$processos[$key]['link'].">(Veja)</a>";
+                                                        }
+                                                        ?>
+                                                    </dt>
+                                                </dl>
+                                                <?
+                                        }
+                                        }
+                                        else
+                                        {
+                                        ?>
+                                                <dl><dt>Esse pol�tico n�o possui processos ou eles n�o est�o dispon�veis</dt></dl>
+                                                <?
+                                        }
+                                        ?>
+
+                                    <div class="see-more">
+                                        <a href="politico/politico/rank?rank=processos"><?=$veja_mais_txt?></a>
+                                    </div>
+
+
+                            <!-- content -->
+                                </div>
+                        </div>
+                    </div>
+
+
+                        <div id="tabs1-votos">
+                            <!-- content -->
+                            <div class="container">
+
+                                <div class="item processos">
+                                    <?
+                                    if((count($votos) > 0)){
+                                    ?>
+
+                                    <?
+                                    foreach($votos as $key=>$value)
+                                    {
+                                    ?>
+                                    <dl>
+                                        <dt>
+                                            <BR><?=$votos[$key]['codigo']?><BR>
+                                            <?
+                                            if($votos[$key]['esperado'] != $votos[$key]['voto'])
+                                            {
+                                            ?>
+                                                Votou diferente do esperado na votação <?=$votos[$key]['codigo']?>
+                                            <?
+                                            }
+                                            else
+                                            {
+                                            ?>
+                                            Votou deacordo com o esperado na <?=$votos[$key]['codigo']?>
+                                            <?
+                                            }
+                                            ?>
+                                            <BR><?=$votos[$key]['descricao']?><BR>
+
+                                            <?
+                                            if($votos[$key]['link'] != "")
+                                            {
+                                            print "<a href=".$votos[$key]['link'].">(Veja)</a>";
+                                            }
+                                            ?>
+                                        </dt>
+                                    </dl>
+                                    <?
+                                        }
+                                        }
+                                        else
+                                        {
+                                        ?>
+                                    <dl><dt>Esse pol�tico n�o possui processos ou eles n�o est�o dispon�veis</dt></dl>
+                                    <?
+                                        }
+                                        ?>
+                                    <!-- content -->
+                                </div>
+                            </div>
+                        </div>
+
+
+					</div>
+					<!-- container -->
+					
+					
+					<!--h2>Coment�rios</h2-->
+					
+					<link href="catalog/view/javascript/facebox/src/facebox.css" media="screen" rel="stylesheet" type="text/css" />
+					<link href="catalog/view/javascript/facebox/examples/css/example.css" media="screen" rel="stylesheet" type="text/css" />
+					<script src="catalog/view/javascript/facebox/src/facebox.js" type="text/javascript"></script>
+					<script type="text/javascript">
+						jQuery(document).ready(function($) {
+						  $('a[rel*=facebox]').facebox({
+							loadingImage : 'catalog/view/javascript/facebox/src/loading.gif',
+							closeImage   : 'catalog/view/javascript/facebox/src/closelabel.png'
+						  })
+						})
+					  </script>
+					  
+					  <?
+					//  print_R($_SERVER);
+					//  include("G:/projeto/VertrigoServ224/www/revolucaobrasileira/site/wall/profile.php");
+					  ?>
+
+                    <?=wall($politicos[0]['id'],1,$_SESSION['customer_id'])?>
+
+				</div>
+				
+				<!-- wall -->
+
+				<div class="picture" style="height:auto">
+
+					<div class="photo">
+
+                        <?
+                        $i = 0;
+                        foreach($fotos as $key=>$value)
+                        {
+                        $i = $i+1;
+
+                        if($i>1)
+                        $style="none";
+                        else
+                        $style="block";
+
+                        ?>
+                        <a href="<?=$fotos[$key]['filename']?>" rel="prettyPhoto[gallery2]">
+                        <img entity_id="<?=$fotos[$key]['ordem']?>" class="image-selector" alt="" src="<?=$fotos[$key]['thumb']?>" style="display: <?=$style?>"/></a>
+                        <?
+                        }
+                        ?>
+					</div>
+                    <div>
+
+                    <h4 class="name"><?=$politicos[0]['apelido']?><span><?=$politicos[0]['partidoNome']?> / <?=$politicos[0]['uf_sigla']?></span> <BR><a href=politico/politico?casaId=<?=$politicos[0]['casaId']?>><?=$politicos[0]['casaNome']?></a> </h4>
+                        </div>
+                    <?
+					if(isset($frases[0]['frase']))
+					{
+					?>
+					<em><?=$frases[0]['frase']?><BR><?=$frases[0]['explicacao']?> 
+					<?
+					}
+					?>
+					<? 
+					if(isset($frases[0]['corrupcaoId']) and $frases[0]['corrupcaoId'] != "")
+					{
+					?>
+					<BR><?=$saiba_mais_txt?>: <a href="conteudo/corrupcao?corrupcao_id=<?=$frases[0]['corrupcaoId']?>"><?=$frases[0]['nome']?></a>
+					<?
+					}
+					?>
+					</em>
+				</div>
+				<!-- wall -->
+			</div><!-- politico -->
+		 </div><!-- content -->
+	</div><!-- #main -->
+  <BR>
+  
+  
+
+
+<?php echo $column_right; ?>
+
+<?php echo $footer ?>
+
+<script>
+
+<?
+
+if(isset($_SESSION['customer_id']))
+{
+?>
+		function votar(id,action,page){
+
+		if(action == "deslike")
+		{
+			var actionback = 'undeslike';
+			var name = action;
+			var on = "on";
+			var text = 'Não curtiu';
+			var classe = "deslike";
+		}
+
+		if(action == "like")
+		{
+			var actionback = 'unlike';
+			var name = action;
+			var on = "on";
+			var text = 'Curtiu';
+			var classe = "like";
+
+		}
+
+		if(action == "undeslike")
+		{
+			var actionback = 'deslike';
+			var name = actionback;
+			var on = "";
+			var text = 'Não curtiu';
+			var classe = "deslike";
+		}
+
+		if(action == "unlike")
+		{
+			var actionback = 'like';
+			var name = actionback;
+			var on = "";
+			var text = 'Curtiu';
+			var classe = "like";
+		}
+
+
+			$.ajax({
+			type: 'GET',
+			url: 'index.php?route=ajax/ajax/like',
+			dataType: 'html',
+					data: 'action='+action+'&page='+page+'&userId=<?=$_SESSION['customer_id']?>&id=<?=$politicos[0]['id']?>',
+			beforeSend: function() {
+			//    $('.success, .warning').remove();
+			//      $('#gostei'+id).html('Aguarde...');
+	//            $('#review_title').after('<div class="wait"><img src="catalog/view/theme/armazem/image/loading_1.gif" alt="" /> Por favor, aguarde!</div>');
+			},
+			complete: function() {
+				//$('#'+name+id).remove();
+
+				$('#'+name+id).replaceWith('<a id='+name+id+' class='+classe+on+' href="javascript:votar('+id+',\''+actionback+'\',\''+page+'\')">'+text+'?</a>');
+			//    $('#'+action+'num'+id).html(parseInt($('#'+action+'num'+id).text())+1);
+			//    $('#'+action+'numa'+id).html(parseInt($('#'+action+'numa'+id).text())+1);
+			   // $('.wait').remove();
+			},
+			success: function(data) {
+				if (data.error) {
+			//        $('#review_title').after('<div class="warning">' + data.error + '</div>');
+				}
+
+				if (data.success) {
+			  //      $('#review_title').after('<div class="success">' + data.success + '</div>');
+				}
+			}
+		});
+		}
+<?
+}
+else
+{
+?>
+function votar(){
+alert("Vc precisa se cadastrar");
+}
+<?
+}
+?>
+</script>
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function(){
+        prettyPhoto: $("a[rel^='prettyPhoto']").prettyPhoto({theme: 'dark_square',slideshow:5000, autoplay_slideshow:false, deeplinking: false });
+    });
+</script>

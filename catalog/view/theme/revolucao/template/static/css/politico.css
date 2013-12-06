@@ -1,0 +1,618 @@
+/*
+
+politico.css	
+	
+
+*/
+
+
+.politico {
+	float: left;
+	width: 100%;
+}
+
+.politico .picture {
+    background: none repeat scroll 0 0 #F1F1F1;
+    border: 1px solid #e3e3e3;
+    float: left;
+    overflow: hidden;
+    padding: 5px;
+    width: 276px;
+}
+
+.photo img { width:252px; cursor:-moz-zoom-in; border:2px solid white  }
+.photo img:hover { border:2px solid #8CB31F }
+
+.politico .picture .photo {
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	position:relative
+
+}
+
+.politico .picture h4 {/*background:url(../../../images/bg_trans.png); color:#f1f1f1;*/ 
+    font-family:'News Cycle', sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    padding: 0 0 10px 0;
+    width: 100%;
+}
+
+.politico .picture h4 span { 
+    border-left: 1px solid #CCCCCC;
+    color: #999999;
+    float: right;
+    font-size: 13px;
+    margin-top: 6px;
+    padding-left: 10px;
+}
+.politico .picture h4 a { font-size:20px }
+.politico .picture .photo a { cursor:-moz-zoom-in }
+
+.politico .picture em {
+	float: left;
+	width: 225px;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 19px;
+	letter-spacing: -1px;
+	text-shadow: 1px 1px #fff;
+	padding-left: 40px;
+	background: url(../images/politico-user-quote.png) left top no-repeat;
+	margin-top: 30px;
+}
+
+
+.politico .wall {
+	float: right;
+	width: 660px;
+	border:1px solid white
+}
+
+.politico .wall h2.name {
+	color: #004b97 !important;
+	letter-spacing: -2px;
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	background:#f1f1f1; color:#333; font-size:15px; padding:10px
+
+}
+
+
+.politico .wall .bio {
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+
+.politico .wall a { }
+
+.politico .wall .bio p {
+	float: left;
+	width: 100%;
+	text-shadow: 1px 1px #fff;
+	line-height: 18px;
+}
+
+.politico .wall .bio a.wikipedia {
+	float: right;
+	text-align: center;
+	background: url(../images/commom.jpg) 0px 0px repeat-x;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 2px #627b1e;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.politico .wall .share {
+	float: right;
+	width: 220px;
+	margin-top: 30px;
+}
+
+.politico .wall .share .facebook {
+	float: left;
+	width: 100px;
+	margin-right: 15px;
+}
+
+.politico .wall .share .twitter {
+	float: left;
+	width: 100px;
+}
+
+
+.politico .wall .badges {
+	float: left;
+	width: 400px;
+	margin-top: 30px;
+}
+
+.politico .wall .badges .likes {
+	float: left;
+	font-size: 16px;
+	color: #8d8d8d;
+	font-weight: bold;
+	text-shadow: 1px 1px #fff;
+	background: url(../images/commom-icons.png) left -233px no-repeat;
+	padding-top: 3px;
+	padding-left: 29px;
+	padding-bottom: 3px;
+}
+
+.politico .wall .badges .dislikes {
+	float: left;
+	font-size: 16px;
+	color: #8d8d8d;
+	font-weight: bold;
+	text-shadow: 1px 1px #fff;
+	background: url(../images/commom-icons.png) left -443px no-repeat;
+	padding-top: 3px;
+	padding-left: 29px;
+	padding-bottom: 3px;
+	margin-left: 10px;
+}
+
+.politico .wall .badges .comments {
+	float: left;
+	font-size: 16px;
+	color: #8d8d8d;
+	font-weight: bold;
+	text-shadow: 1px 1px #fff;
+	background: url(../images/commom-icons.png) left -130px no-repeat;
+	padding-top: 3px;
+	padding-left: 29px;
+	padding-bottom: 3px;
+	margin-left: 10px;
+}
+
+.politico .wall .badges .trend {
+	float: left;
+	font-size: 16px;
+	color: #ff2a00;
+	font-weight: bold;
+	text-shadow: 1px 1px #fff;
+	background: url(../images/commom-icons.png) left -417px no-repeat;
+	padding-top: 3px;
+	padding-left: 29px;
+	padding-bottom: 3px;
+	width: auto !important;
+	margin-left: 10px;
+}
+
+
+
+.politico .wall .container {
+	float: left;
+	width: 100% !important;
+	padding-top: 30px;
+}
+
+
+.politico .wall .container .item {
+	width: 100%;
+	float: left;
+	}
+
+/*.politico .wall .container .item 
+ {
+	color: #779a16;
+	font-size: 28px;
+	margin: 0;
+	padding: 0;
+	letter-spacing: -1px;
+	border-bottom: 1px dotted #d4d4d4;
+	padding-bottom: 15px;
+	padding-top: 5px;
+}
+*/
+dl {
+	float: left;
+	width: 100%;
+	font-size: 14px;
+	background: url(../images/list-green-line.png) left bottom no-repeat ;
+	padding: 14px 0;
+	border-bottom:1px solid #ddd
+}
+/*dl:hover { background: #edf8ea }*/
+dl:hover { background:  url(../images/list-green-line.png) left bottom no-repeat  /*#b94848*/ #e9e9e9 }
+dl:hover a:hover { background:none; }
+dl:hover dd a {}
+dl:hover dd {  }
+dl:hover .dados_bens { color:#666 !important }
+dl:hover .valor_bens { color:#333 !important }
+
+dd {
+	float: left;
+	margin: 0;
+	padding-bottom: 2px;
+	padding-left:10px;
+	width:97%
+	
+}
+dd a {
+	color:#333 !important;
+}
+dd a:hover {
+	color: #8cb31f;
+}
+
+.origem_materia { width:300px }
+.origem_materia a { font-size:11px; color:#999 !important; text-transform:uppercase }
+
+
+.see-more {
+	float: right;
+	text-align: right;
+	font-size: 11px;
+	text-transform:uppercase;
+	width:200px;
+	padding-right:10px
+}
+
+.see-more a{ color:#8CB31F !important }
+.see-more a:hover { color:#fff !important; background:#8CB31F !important }  
+
+
+.politico .wall .container .item.verbas dd {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 14px;
+}
+
+.politico .wall .container .item.processos dt {
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+
+.politico .wall .container .item.bens dd {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 14px;
+}
+
+
+.politico .wall h2 {
+	float: left;
+    font-style:normal;
+	width: 100%;
+	font-size: 28px;
+	letter-spacing: -1px;
+	position:relative;
+	font-weight:normal;
+	 font-family:'News Cycle', sans-serif; 
+	 color:#999; 
+	 border-bottom:1px solid #ddd; 
+	 padding-bottom:5px; 
+	 margin:20px 0 0 0	
+}
+
+.politico .wall .comments-container {
+	float: left;
+	width: 620px;
+	background: #fff;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	margin-left: 10px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.politico .wall .comments-container textarea {
+	float: left;
+	width: 600px;
+	border: 1px solid #e5e5e5;
+	resize: none;
+	height: 100px;
+	margin-top: 5px;
+	padding: 0;
+	padding: 10px;
+	font-family: Arial;
+	font-size: 14px;
+	outline: none;
+	-moz-box-shadow: inset 5px 5px 5px #f6f6f6;
+	-webkit-box-shadow: inset 5px 5px 5px #f6f6f6;
+	box-shadow: inset 5px 5px 5px #f6f6f6;
+}
+
+
+.politico .wall .comments-container .form {
+	float: left;
+	width: 100%;
+	border-bottom: 1px dotted #d4d4d4;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.politico .wall .comments-container .form textarea:focus {
+	color: #143874;
+	border: 1px solid #486ba6;
+	-moz-box-shadow: 0 0 5px #88bbf1;
+	-webkit-box-shadow: 0 0 5px #88bbf1;
+	box-shadow: 0 0 5px #88bbf1;
+}
+
+.politico .wall .comments-container .form input[type=submit] {
+	float: right;
+	background: url(../images/politico-comment-form-bt.png) left top repeat-x;
+	color: #fff;
+	border: none;
+	font-weight: bold;
+	padding: 10px;
+	font-size: 13px;
+	text-shadow: 1px 1px #102d5f;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+
+
+.politico .wall .comments-container .list {
+	float: left;
+	width: 100%;
+}
+
+.politico .wall .comments-container .list .comm-item {
+	float: left;
+	width: 100%;
+	background: url(../images/list-blue-line.png) left bottom no-repeat;
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+
+.politico .wall .comments-container .list .comm-item .photo {
+	float: left;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+}
+
+.politico .wall .comments-container .list .comm-item .inset {
+	margin-left: 80px;
+}
+
+.politico .wall .comments-container .list .comm-item .inset .user {
+	font-style: italic;
+}
+
+.politico .wall .comments-container .list .comm-item .inset .user a {
+	font-weight: bold;
+	color: #004b97;
+}
+
+.politico .wall .comments-container .list .comm-item .inset .user a:hover {
+	color: #3e6cbe;
+}
+
+.politico .wall .comments-container .list .comm-item .inset .text {
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+.politico .wall .comments-container .list .comm-item .inset .actions {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+
+.politico .wall .comments-container .list .comm-item .inset .actions .like {
+	float: left;
+	color: #004f9b;
+	font-weight: bold;
+	background: url(../images/commom-icons.png) left -465px no-repeat;
+	padding-bottom: 3px;
+	padding-top: 8px;
+	padding-left: 30px;
+	letter-spacing: -1px;
+	cursor: pointer;
+}
+
+.politico .wall .comments-container .list .comm-item .inset .comm-item {
+	border-top: 1px dotted #d4d4d4;
+	padding-top: 20px;
+	background: url(../images/list-gray-line.png) left bottom no-repeat;
+}
+
+.noticia .noticia-content .share-etc {
+	float: left;
+	border-top: 1px dotted #888;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.noticia .noticia-content .share-etc .facebook {
+	float: right;
+	width: 200px;
+	margin-top: 10px;
+}
+
+.share-etc .like {
+	float: left;
+	color: #8aad18;
+	background: url(../images/commom-icons.png) right -205px no-repeat;
+	padding-right: 30px;
+	font-weight: bold;
+	margin-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+}
+
+.share-etc .likeon {
+	float: left;
+	color: #8aad18;
+	background: url(../images/commom-icons.png) right -258px no-repeat;
+	padding-right: 30px;
+	font-weight: bold;
+	margin-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+}
+
+
+.share-etc .deslike {
+	float: left;
+	color: #ad2218;
+	background: url(../images/commom-dislike.png) right center no-repeat;
+	padding-right: 30px;
+	font-weight: bold;
+	margin-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+}
+
+.share-etc .deslikeon {
+	float: left;
+	color: #ad2218;
+	background: url(../images/commom-dislikeon.png) right center no-repeat;
+	padding-right: 30px;
+	font-weight: bold;
+	margin-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+}
+
+.share-etc .fav {
+	float: left;
+	color: #c99d17;
+	background: url(../images/commom-icons.png) right -51px no-repeat;
+	padding-right: 30px;
+	font-weight: bold;
+	margin-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+}
+
+
+
+.details_pic { font-size:12px}
+.details_pic li {   border-bottom: 1px solid #d9d9d9;
+    color: #666666;
+    float: left;
+    padding: 9px 0;
+    width: 100%;}
+
+.fundo_branco { background:#fff; float:left; padding:5px 10px }
+
+.graphic { float:left;width:100% }
+
+
+.icon_chat { background: url(../../../images/icon_chat.png) 0 center no-repeat; padding-left:20px !important; width:92% !important }
+
+.urna { color:#555555;
+  float:left;
+  font-size:12px;
+  padding-top:20px;
+  text-align:center;
+  width:276px;
+}  
+
+.urna a { color:#a92828; font-size:11px }
+
+.ausencias { font-size:18px; color:#c02929 }
+
+
+ 
+
+
+.socials {
+  background-image:url(../../../image/socials/share.png) ;
+  background-position:initial initial;
+  background-repeat:no-repeat no-repeat;
+  cursor:pointer;
+  display:block;
+  height:40px;
+  left:1076px;
+  margin-bottom:0;
+  position:absolute;
+  top:113px;
+  width:40px;
+ }
+ 
+ .etabs { float:left; width:100% }
+ 
+ .lista_conteudo_politico { float:left; width:100%; }
+ .lista_conteudo_politico h2 {  font-family:'News Cycle', sans-serif; color:#999; border-bottom:1px solid #ddd; padding-bottom:5px; margin:20px 0	 }
+ .lista_conteudo_politico h2.last_news { background:url(../../../image/icon_news.png) no-repeat 0 center ; padding-left:40px}
+ 
+ .red { color:#C02929; font-size:26px; letter-spacing:-1px; }
+ 
+ .dado_indisponivel { float:left; width:100%; background:#f1f1f1; padding:10px 0; font-size:12px; text-align:center; color:#666}
+ 
+ .info_complementar {float:left;   padding:20px 10px; font-size:26px; width:637px; border-right:1px solid #ddd; border-left:1px solid #ddd; color:#666; background:#f1f1f1}
+ 
+ .bens_lista { float:left; width:100%; }
+ .valor_bens {float:left; color:#000; padding-right:10px; width:25%; border-right:1px solid #ddd; margin-right:10px }
+ .dados_bens {font-size:11px; color:#666; float:left; width:70% }
+ 
+ .valor_bens_title{ background:#888; float:left; width:27%; color:#f1f1f1; text-align:center; font-family:'News Cycle', sans-sefir; font-size:20px; padding:0 0 5px 0; }
+.dados_bens_title { background:#ddd; color:#666; float:left; width:73%;text-align:center; font-family:'News Cycle', sans-sefir; font-size:20px; padding:0 0 5px 0;  }
+
+.veja_mais {
+  color:#8CB31F;
+  text-align:right;
+  float:none;
+  font-size:11px;
+  letter-spacing:0;
+  margin-top:0;
+  position:absolute;
+  right:0;
+  text-transform:uppercase;
+  top:12px;
+  width:125px;
+  font-family:'lucida grande', tahoma, verdana, arial, sans-serif;
+ }
+.veja_mais a {   }
+.veja_mais a:hover {}
+
+.title_bens       { background:url(../../../image/icon_house.png)     no-repeat 0 center ; padding-left:40px;  width:619px !important }
+.title_verba      { background:url(../../../image/icon_verba.png)     no-repeat 0 center ; padding-left:40px;  width:619px !important }
+.title_justice    { background:url(../../../image/icon_justice.png)   no-repeat 0 center ; padding-left:40px;  width:619px !important }
+.title_corrupcao { background:url(../../../image/icon_corrupcao.png) no-repeat 0 center ; padding-left:40px;  width:619px !important }
+.link_processo { float:right; color:#8CB31F !important; text-transform:uppercase; font-size:11px;margin: 10px 10px 0 }
+.link_processo a { color:#8CB31F !important }
+.scroll_bens { 
+  border-bottom-color:#CCCCCC;
+  border-bottom-style:solid;
+  border-bottom-width:1px;
+  border-left-width:0;
+  box-shadow:#999999 -3px 2px 32px inset;
+  float:left;
+  max-height:300px;
+  overflow-y:scroll;
+  width:658px;
+}
+
+.scroll_red { max-height:400px; }
+.scroll_red dl { }
+.scroll_red dl:hover  {color:#fff ; 	background: url(../images/list-green-line.png) left bottom no-repeat #b94848 ;}
+.scroll_red dl:hover a { color:#f1f1f1 !important }
+.scroll_red dl:hover a:hover { background:none }
+
+.como_votou { font-size:13px }
+.voto_diferente {  background:#C02929; color:#f1f1f1; padding:2px }
+.voto_acordo {  background:#8CB31F; color:#f1f1f1; padding:2px }
+
+.box_comments {
+	float:left; 
+	width:100%; 
+}
+

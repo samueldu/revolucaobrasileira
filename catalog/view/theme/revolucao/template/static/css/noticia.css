@@ -1,0 +1,397 @@
+/*
+
+politico.css	
+	
+
+*/
+
+.noticia {
+	float: left;
+	width: 100%;
+}
+
+.noticia h1.title {
+	color: #004b97 !important;
+	font-size: 40px !important;
+	margin-top: 20px !important;
+	margin-bottom: 10px !important;
+}
+
+.noticia .basic-info {
+	float: left;
+	width: 100%;
+}
+
+.noticia .basic-info span {
+	background: url(../images/commom.jpg);
+	padding: 5px;
+	float: left;
+	margin-bottom: 10px;
+	color: white;
+	font-weight: bold;
+	font-style: normal;
+	text-shadow: 1px 1px #40520E;
+	background-position: left -125px
+}
+
+.noticia .basic-info em {
+	float: left;
+	font-style: normal;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+.noticia .basic-info .font-size {
+	float: right;
+}
+
+.noticia .basic-info .font-size p {
+	float: left;
+	margin: 0;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.noticia .basic-info .font-size a {
+	float: left;
+	background: #fff;
+	padding: 3px;
+	font-weight: bold;
+	font-size: 18px;
+	width: 20px;
+	text-align: center;
+	margin-left: 5px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
+.noticia .basic-info .font-size a:hover {
+	color: #57710e;
+}
+
+.noticia .noticia-content {
+	width: 935px;
+	background: #fff;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	float: left;
+	margin-top: 25px;
+	padding: 15px;
+	margin-bottom: 30px;
+}
+
+.noticia .noticia-content p {
+	font-size: 14px;
+	margin-bottom: 30px;
+	line-height: 22px;
+}
+
+.noticia .noticia-content .veja-tambem {
+	float: right;
+	width: 360px;
+	border-left: 2px solid #e5e5e5;
+	margin-left: 20px;
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+
+.noticia .noticia-content .veja-tambem h4 {
+	color: #5f7b12;
+	font-size: 24px;
+	margin: 0;
+	margin-top: 10px;
+}
+
+
+.noticia .noticia-content .veja-tambem dl {
+	float: left;
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+.noticia .noticia-content .veja-tambem dl dd {
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	margin-top: 15px;
+}
+
+.noticia .noticia-content .veja-tambem dl dt {
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	font-style: italic;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	background: url(../images/list-green-line.png) left bottom no-repeat;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.noticia .noticia-content .veja-tambem dl dt:last-child {
+	background: none;
+}
+
+
+.noticia .noticia-content .veja-tambem dl dt strong a {
+	color: #617f0f;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.noticia .noticia-content .veja-tambem dl dt strong a:hover {
+	color: #4e670a;
+}
+
+.noticia .noticia-content .share-etc {
+	float: left;
+	border-top: 1px dotted #888;
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.noticia .noticia-content .share-etc .facebook {
+	float: right;
+	width: 200px;
+	margin-top: 10px;
+}
+
+.noticia .noticia-content .share-etc .like {
+	float: left;
+	color: #8aad18;
+	background: url(../images/commom-icons.png) right -205px no-repeat;
+	padding-right: 30px;
+	font-weight: bold;
+	margin-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+}
+
+.noticia .noticia-content .share-etc .likeon {
+	float: left;
+	color: #8aad18;
+	background: url(../images/commom-icons.png) right -258px no-repeat;
+	padding-right: 30px;
+	font-weight: bold;
+	margin-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+}
+
+
+.noticia .noticia-content .share-etc .deslike {
+	float: left;
+	color: #ad2218;
+	background: url(../images/commom-dislike.png) right center no-repeat;
+	padding-right: 30px;
+	font-weight: bold;
+	margin-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+}
+
+.noticia .noticia-content .share-etc .deslikeon {
+	float: left;
+	color: #ad2218;
+	background: url(../images/commom-dislikeon.png) right center no-repeat;
+	padding-right: 30px;
+	font-weight: bold;
+	margin-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+}
+
+.noticia .noticia-content .share-etc .fav {
+	float: left;
+	color: #c99d17;
+	background: url(../images/commom-icons.png) right -51px no-repeat;
+	padding-right: 30px;
+	font-weight: bold;
+	margin-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+}
+
+
+
+
+
+.noticia .this-week {
+	float: left;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.noticia .this-week .grid {
+	float: left;
+	width: 100%;
+	padding-top: 30px !important;
+}
+
+
+/* Comentarios */
+
+
+.noticia .comments-container {
+	float: left;
+	width: 600px;
+	background: #fff;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	margin-left: 10px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.noticia .comments-container textarea {
+	float: left;
+	width: 570px;
+	border: 1px solid #e5e5e5;
+	resize: none;
+	height: 100px;
+	margin-top: 5px;
+	padding: 0;
+	padding: 10px;
+	font-family: Arial;
+	font-size: 14px;
+	outline: none;
+	-moz-box-shadow: inset 5px 5px 5px #f6f6f6;
+	-webkit-box-shadow: inset 5px 5px 5px #f6f6f6;
+	box-shadow: inset 5px 5px 5px #f6f6f6;
+}
+
+
+.noticia .comments-container .form {
+	float: left;
+	width: 100%;
+	border-bottom: 1px dotted #d4d4d4;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.noticia .comments-container .form textarea:focus {
+	color: #143874;
+	border: 1px solid #486ba6;
+	-moz-box-shadow: 0 0 5px #88bbf1;
+	-webkit-box-shadow: 0 0 5px #88bbf1;
+	box-shadow: 0 0 5px #88bbf1;
+}
+
+.noticia .comments-container .form input[type=submit] {
+	float: right;
+	background: url(../images/politico-comment-form-bt.png) left top repeat-x;
+	color: #fff;
+	border: none;
+	font-weight: bold;
+	padding: 10px;
+	font-size: 13px;
+	text-shadow: 1px 1px #102d5f;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+
+
+.noticia .comments-container .list {
+	float: left;
+	width: 100%;
+}
+
+.noticia .comments-container .list .comm-item {
+	float: left;
+	width: 100%;
+	background: url(../images/list-blue-line.png) left bottom no-repeat;
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+
+.noticia .comments-container .list .comm-item .photo {
+	float: left;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+}
+
+.noticia .comments-container .list .comm-item .inset {
+	margin-left: 80px;
+}
+
+.noticia .comments-container .list .comm-item .inset .user {
+	font-style: italic;
+}
+
+.noticia .comments-container .list .comm-item .inset .user a {
+	font-weight: bold;
+	color: #004b97;
+}
+
+.noticia .comments-container .list .comm-item .inset .user a:hover {
+	color: #3e6cbe;
+}
+
+.noticia .comments-container .list .comm-item .inset .text {
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+.noticia .comments-container .list .comm-item .inset .actions {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+
+.noticia .comments-container .list .comm-item .inset .actions .like {
+	float: left;
+	color: #004f9b;
+	font-weight: bold;
+	background: url(../images/commom-icons.png) left -465px no-repeat;
+	padding-bottom: 3px;
+	padding-top: 8px;
+	padding-left: 30px;
+	letter-spacing: -1px;
+	cursor: pointer;
+}
+
+.noticia .comments-container .list .comm-item .inset .comm-item {
+	border-top: 1px dotted #d4d4d4;
+	padding-top: 20px;
+	background: url(../images/list-gray-line.png) left bottom no-repeat;
+}
+
+
+
+
+.noticia .see-more-sidebar {
+	float: right;
+	width: 310px;
+	height: 600px;
+}
+
+
+.noticia .see-more-sidebar .grid {
+	padding-top: 0px !important;
+}
+
+.noticia .see-more-sidebar .grid .item {
+	margin: 0;
+	clear: both;
+	margin-bottom: 20px;
+}

@@ -1,0 +1,127 @@
+@charset "ISO-8859-1";
+/* CSS Document */
+
+
+.box_user {  clear:both   }
+.box_user_new { background:green; clear:both } 
+.login_site {	margin-bottom: 10px; float:left; color:#333}
+
+.box_login h3 { float:left; width:50%; cursor:pointer; margin:0 0 0 ; font-size:1.4em}
+.box_login h3:hover { background:#ccc }
+.box_login h3 span { padding:5px; float:left }.text_login
+
+.text_login {color: #666;
+    font-family: trebuchet ms;
+    font-size: 12px;
+    padding-top: 10px;
+	padding-bottom:5px;
+	margin-bottom:0
+}
+
+.linha {    border-top: 1px solid #DDDDDD;
+    float: left;
+    margin: 25px 0;
+    position: relative;
+    width: 100%; }
+.linha span {     background: none repeat scroll 0 0 #FFFFFF;
+    color: #999999;
+    font-size: 11px;
+    left: 160px;
+    padding: 10px;
+    position: absolute;
+    top: -18px;}
+	
+	.connect { margin-top:15px; display:block; clear:both; width:350px }
+	
+	
+.button_loja { 
+    background: none repeat scroll 0 0 #555555;
+    border: 1px solid #333333;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 0 2px #CCCCCC;
+    float: right;
+    margin: 5px 10px 10px 0;
+}
+
+.button_loja:hover {  box-shadow:0 0 0 4px #ccc }
+.button_loja a { 
+    color: #FFFFFF;
+    float: right;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 15px;
+    font-style: italic;
+    padding: 6px 13px;
+	cursor:pointer
+}
+.button_loja a:hover { color: #f1f1f1 }
+
+.button_loja input { 
+    color: #FFFFFF;
+    background:#555555;
+    border:0;
+    cursor:pointer;
+    float: right;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 15px;
+    font-style: italic;
+    padding: 6px 13px;
+}
+.button_loja input:hover { color: #f1f1f1 }
+
+
+.login_site input {
+	background:#f7f7f7;
+	border:1px solid #d4d4d4;
+	padding:8px 10px;
+	font-size:20px;
+	color:#666;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-radius:5px
+}
+
+.esquecido {
+	  color: #CC3333;
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.esquecido:hover{
+	text-decoration:underline;
+	background:none;
+	color:#cc3333
+}
+
+
+.button_front { 
+    background: none repeat scroll 0 0 #97E7EB;
+    border: 2px solid #67AFB3;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 4px 2px #316669;
+    float: left;
+    margin-left: 190px;
+    margin-top: 20px;
+}
+.button_front:hover {  box-shadow:0 0 4px 3px #4ca8ad }
+.button_front a { 
+ color: #215153;
+    float: right;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 20px;
+    font-style: italic;
+    padding: 10px 18px;
+    text-decoration: none;
+}
+.button_loja a:hover { color: #f1f1f1 }
+
+
+.input_grande {
+	    background: none repeat scroll 0 0 #F7F7F7;
+    border: 1px solid #D4D4D4;
+    color: #666666;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    padding: 8px 10px;
+	border-radius:5px
+}
+

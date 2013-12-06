@@ -1,0 +1,418 @@
+/*
+
+politico.css	
+	
+
+*/
+
+.politico {
+	float: left;
+	width: 100%;
+	background: #fff;  
+}
+
+.politico .picture {
+	float: left;
+	width: 265px;
+	position: fixed;
+}
+
+.politico .picture .photo {
+	float: left;
+	width: 263px;
+	height: 368px;
+	overflow: hidden;
+	border: 1px solid #e8e8e8;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
+.politico .picture em {
+	float: left;
+	width: 225px;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 19px;
+	letter-spacing: -1px;
+	text-shadow: 1px 1px #fff;
+	padding-left: 40px;
+	background: url(../images/politico-user-quote.png) left top no-repeat;
+	margin-top: 30px;
+}
+
+
+.politico .wall {
+	float: right;
+	width: 660px;
+}
+
+.politico .wall h1.name {
+	color: #004b97 !important;
+	letter-spacing: -2px;
+	float: left;
+	width: 100%;
+	padding-bottom: 20px !important;
+	border-bottom: 1px solid #ccc;
+}
+
+
+.politico .wall .bio {
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding-top: 20px;
+}
+
+.politico .wall .bio p {
+	float: left;
+	width: 100%;
+	text-shadow: 1px 1px #fff;
+	line-height: 18px;
+}
+
+.politico .wall .bio a.wikipedia {
+	float: right;
+	text-align: center;
+	background: url(../images/commom.jpg) 0px 0px repeat-x;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 2px #627b1e;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.politico .wall .share {
+	float: right;
+	width: 220px;
+	margin-top: 30px;
+}
+
+.politico .wall .share .facebook {
+	float: left;
+	width: 100px;
+	margin-right: 15px;
+}
+
+.politico .wall .share .twitter {
+	float: left;
+	width: 100px;
+}
+
+
+.politico .wall .badges {
+	float: left;
+	width: 400px;
+	margin-top: 30px;
+}
+
+.politico .wall .badges .likes {
+	float: left;
+	font-size: 16px;
+	color: #8d8d8d;
+	font-weight: bold;
+	text-shadow: 1px 1px #fff;
+	background: url(../images/commom-icons.png) left -233px no-repeat;
+	padding-top: 3px;
+	padding-left: 29px;
+	padding-bottom: 3px;
+}
+
+.politico .wall .badges .dislikes {
+	float: left;
+	font-size: 16px;
+	color: #8d8d8d;
+	font-weight: bold;
+	text-shadow: 1px 1px #fff;
+	background: url(../images/commom-icons.png) left -443px no-repeat;
+	padding-top: 3px;
+	padding-left: 29px;
+	padding-bottom: 3px;
+	margin-left: 10px;
+}
+
+.politico .wall .badges .comments {
+	float: left;
+	font-size: 16px;
+	color: #8d8d8d;
+	font-weight: bold;
+	text-shadow: 1px 1px #fff;
+	background: url(../images/commom-icons.png) left -130px no-repeat;
+	padding-top: 3px;
+	padding-left: 29px;
+	padding-bottom: 3px;
+	margin-left: 10px;
+}
+
+.politico .wall .badges .trend {
+	float: left;
+	font-size: 16px;
+	color: #ff2a00;
+	font-weight: bold;
+	text-shadow: 1px 1px #fff;
+	background: url(../images/commom-icons.png) left -417px no-repeat;
+	padding-top: 3px;
+	padding-left: 29px;
+	padding-bottom: 3px;
+	width: auto !important;
+	margin-left: 10px;
+}
+
+
+
+.politico .wall .container {
+	float: left;
+	width: 100% !important;
+	padding-top: 30px;
+}
+
+
+.politico .wall .container .item {
+	width: 290px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	float: left;
+	background: #fff;
+	padding: 10px;
+	margin: 10px;
+}
+
+.politico .wall .container .item h3 {
+	color: #779a16;
+	font-size: 28px;
+	margin: 0;
+	padding: 0;
+	letter-spacing: -1px;
+	border-bottom: 1px dotted #d4d4d4;
+	padding-bottom: 15px;
+	padding-top: 5px;
+}
+
+.politico .wall .container .item dl {
+	float: left;
+	width: 100%;
+	font-size: 14px;
+	background: url(../images/list-green-line.png) left bottom no-repeat;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+.politico .wall .container .item dl dt {
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.politico .wall .container .item dl dd {
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 5px;
+}
+
+.politico .wall .container .item a:hover {
+	color: #8cb31f;
+}
+
+.politico .wall .container .item.news dt {
+	font-weight: bold;
+}
+
+.politico .wall .container .item dd {
+	font-style: italic;
+	font-size: 12px;
+}
+
+
+.politico .wall .container .item .see-more a {
+	float: left;
+	text-align: center;
+	background: url(../images/commom.jpg) 0px 0px repeat-x;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 2px #627b1e;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-top: 10px;
+}
+
+.politico .wall .container .item .see-more {
+	float: left;
+	width: 100%;
+	border-top: 1px dotted #d4d4d4;
+	margin-top: 10px;
+
+}
+
+
+
+.politico .wall .container .item.verbas dd {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 14px;
+}
+
+.politico .wall .container .item.processos dt {
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+
+.politico .wall .container .item.bens dd {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 14px;
+}
+
+
+.politico .wall h2 {
+	float: left;
+	width: 650px;
+	margin-left: 10px;
+	color: #b4b4b4;
+	text-shadow: 1px 1px #fff;
+	font-size: 34px;
+	letter-spacing: -2px;
+}
+
+.politico .wall .comments-container {
+	float: left;
+	width: 620px;
+	background: #fff;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	margin-left: 10px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.politico .wall .comments-container textarea {
+	float: left;
+	width: 600px;
+	border: 1px solid #e5e5e5;
+	resize: none;
+	height: 100px;
+	margin-top: 5px;
+	padding: 0;
+	padding: 10px;
+	font-family: Arial;
+	font-size: 14px;
+	outline: none;
+	-moz-box-shadow: inset 5px 5px 5px #f6f6f6;
+	-webkit-box-shadow: inset 5px 5px 5px #f6f6f6;
+	box-shadow: inset 5px 5px 5px #f6f6f6;
+}
+
+
+.politico .wall .comments-container .form {
+	float: left;
+	width: 100%;
+	border-bottom: 1px dotted #d4d4d4;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.politico .wall .comments-container .form textarea:focus {
+	color: #143874;
+	border: 1px solid #486ba6;
+	-moz-box-shadow: 0 0 5px #88bbf1;
+	-webkit-box-shadow: 0 0 5px #88bbf1;
+	box-shadow: 0 0 5px #88bbf1;
+}
+
+.politico .wall .comments-container .form input[type=submit] {
+	float: right;
+	background: url(../images/politico-comment-form-bt.png) left top repeat-x;
+	color: #fff;
+	border: none;
+	font-weight: bold;
+	padding: 10px;
+	font-size: 13px;
+	text-shadow: 1px 1px #102d5f;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+
+
+.politico .wall .comments-container .list {
+	float: left;
+	width: 100%;
+}
+
+.politico .wall .comments-container .list .comm-item {
+	float: left;
+	width: 100%;
+	background: url(../images/list-blue-line.png) left bottom no-repeat;
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+
+.politico .wall .comments-container .list .comm-item .photo {
+	float: left;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+}
+
+.politico .wall .comments-container .list .comm-item .inset {
+	margin-left: 80px;
+}
+
+.politico .wall .comments-container .list .comm-item .inset .user {
+	font-style: italic;
+}
+
+.politico .wall .comments-container .list .comm-item .inset .user a {
+	font-weight: bold;
+	color: #004b97;
+}
+
+.politico .wall .comments-container .list .comm-item .inset .user a:hover {
+	color: #3e6cbe;
+}
+
+.politico .wall .comments-container .list .comm-item .inset .text {
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+.politico .wall .comments-container .list .comm-item .inset .actions {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+
+.politico .wall .comments-container .list .comm-item .inset .actions .like {
+	float: left;
+	color: #004f9b;
+	font-weight: bold;
+	background: url(../images/commom-icons.png) left -465px no-repeat;
+	padding-bottom: 3px;
+	padding-top: 8px;
+	padding-left: 30px;
+	letter-spacing: -1px;
+	cursor: pointer;
+}
+
+.politico .wall .comments-container .list .comm-item .inset .comm-item {
+	border-top: 1px dotted #d4d4d4;
+	padding-top: 20px;
+	background: url(../images/list-gray-line.png) left bottom no-repeat;
+}
+

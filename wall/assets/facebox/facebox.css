@@ -1,0 +1,148 @@
+#facebox .b {
+  background:url(b.png);
+}
+
+#facebox .tl {
+  background:url(tl.png);
+}
+
+#facebox .tr {
+  background:url(tr.png);
+}
+
+#facebox .bl {
+  background:url(bl.png);
+}
+
+#facebox .br {
+  background:url(br.png);
+}
+
+#facebox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  text-align: left;
+}
+
+#facebox .popup {
+  position: relative;
+}
+
+#facebox table {
+  border-collapse: collapse;
+}
+
+#facebox td {
+  border-bottom: 0;
+  padding: 0;
+}
+
+#facebox .body {
+  background: #fff;
+  width: 500px;
+  
+}
+
+#facebox .loading {
+  text-align: center;
+  font-weight:bold;
+  font-size:16px;
+  color:#666666;
+  padding:8px;
+}
+
+#facebox .image {
+  text-align: center;
+}
+
+#facebox img {
+  border: 0;
+  margin: 0;
+}
+
+#facebox .footer {
+  background:#F2F2F2 none repeat scroll 0 0;
+  margin-top: 10px;
+  padding-right:15px;
+  margin-bottom:5px;
+}
+.PopUpText{
+	color:#333333;
+	padding:7px;
+	direction:ltr;
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:11px;
+	text-align:left;
+}
+a.CancelPopUp{
+	color:#666666;
+	background:none repeat scroll 0 0 transparent;
+	display:block;
+	padding:6px;
+	text-decoration:none;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	border:solid #999 1px;
+	background:#E5E5E5;
+	cursor:pointer;
+	display:inline-block;
+	float:right;
+	font-family:'Lucida Grande',Tahoma,Verdana,Arial,sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	margin:0 0 0 4px;
+	outline-color:-moz-use-text-color;
+	outline-style:none;
+	outline-width:medium;
+	white-space:nowrap;
+}
+
+.PopUpTopBlue{
+	background:#627AAD;
+	font-size:14px;
+	color:#FFFFFF;
+	font-weight:bold;
+	padding:6px 6px 6px 12px;		
+}
+
+.uiButtonConfirm{
+               background-color:#5B74A8;
+               background-position:0 -48px;
+               border-color:#29447E #29447E #1A356E;
+               font-weight:bold;
+			   padding:6px;
+			   cursor:pointer;
+			   float:right;
+               color:#FFFFFF;
+}
+#facebox .tl, #facebox .tr, #facebox .bl, #facebox .br {
+  height: 10px;
+  width: 10px;
+  overflow: hidden;
+  padding: 0;
+}
+
+#facebox_overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+}
+
+.facebox_hide {
+  z-index:-100;
+}
+
+.facebox_overlayBG {
+  background-color: #000;
+  z-index: 99;
+}
+
+* html #facebox_overlay { /* ie6 hack */
+  position: absolute;
+  height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}

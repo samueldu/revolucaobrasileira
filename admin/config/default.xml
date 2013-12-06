@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<config>
+	<local>
+		<loja>
+			<name>Revolucao</name>
+			<logo>http://{base_url}/opencart/image/data/bongs-pipes-logo.png</logo>
+			<base_dir>/projeto/VertrigoServ224/www/revolucaobrasileira/site/</base_dir>
+			<base_url>http://{base_url}/revolucaobrasileira/site/</base_url>
+			<template>revolucao</template>
+		</loja>
+		<database>
+			<host>localhost</host>
+			<base>revolucao</base>
+			<user>root</user>
+			<pass>vertrigo</pass>
+		</database>
+	</local>
+	<public>
+		<loja>
+			<name>Bongs Pipe</name>
+			<logo>http://store.globalwebmasters.com/upload/image/data/bongs-pipes-logo.png</logo>
+			<base_dir>/home/bongspip/</base_dir>
+			<base_url>http://store.globalwebmasters.com/upload/</base_url>
+			<template>bongspipes</template>
+		</loja>
+		<database>
+			<host>174.120.250.26</host>
+			<base>bongspip_loja</base>
+			<user>bongspip_loja</user>
+			<pass>bongsloja2010</pass>
+		</database>
+	</public>
+</config>

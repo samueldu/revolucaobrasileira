@@ -1,0 +1,29 @@
+
+#blanket {
+   opacity: 0.65;
+   position:absolute;
+   z-index: 9001; /*ooveeerrrr nine thoussaaaannnd*/
+   top:0px;
+   left:0px;
+   width:100%;
+}
+#popUpDiv {
+	position:absolute;
+	
+	border-radius:5px;
+	-webkit-box-shadow:0 0 18px rgba(0,0,0,0.4);
+	-moz-box-shadow:0 0 18px rgba(0,0,0,0.4);
+	border:3px solid #CCC;
+	background: #fff;
+	
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	padding: 10px;
+    
+	
+	box-shadow:0 0 18px rgba(0,0,0,0.4);
+	min-width:350px;
+	min-height:370px;
+	z-index: 9002; 
+}
+#popUpDiv div.innerPOP{background: #fff;}

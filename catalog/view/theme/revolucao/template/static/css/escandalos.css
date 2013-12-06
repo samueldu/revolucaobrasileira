@@ -1,0 +1,617 @@
+/*
+
+politico.css	
+	
+
+*/
+
+
+
+.escandalos {
+	float: left;
+	width: 100%;
+	overflow: visible;
+}
+
+.escandalos h1.title {
+	color: #004b97 !important;
+	font-size: 40px !important;
+	margin-top: 20px !important;
+	margin-bottom: 10px !important;
+}
+
+.escandalos .tit-search {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+.escandalos .tit-search h1 {
+	width: auto !important;
+}
+
+.escandalos .subject {
+	position: absolute;
+	right:0px;
+	color: #0d6fd7;
+	font-weight: bold;
+	font-size: 14px;
+	padding-left: 10px;
+	width: 200px;
+	z-index: 3;
+	margin-top: 20px;
+	top:0px;
+}
+
+.escandalos .subject span {
+	float: right;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: url(../images/commom-select-background.png) right top no-repeat #fff;
+	padding-right: 55px;
+	padding-left: 10px;
+	cursor: pointer;
+	width: 135px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	z-index: 10;
+}
+
+.escandalos .subject ul {
+	float: right;
+	padding: 0;
+	margin: 0;
+	padding-bottom: 5px;
+	background: #fff;
+	border-top: 1px solid #fff;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	display: none;
+	margin-top: 1px;
+	z-index: 3;
+}
+
+.escandalos .subject ul li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 125px;
+	padding: 10px;
+	list-style: none;
+}
+
+.escandalos .subject ul li a:hover {
+	color: #0d6fd7;
+}
+
+.escandalos .grid .item {
+	width: 434px;
+    width: 90%;
+}
+
+.escandalos .grid .escandalo-item h3 {
+	color: #779A15;
+	font-size: 28px;
+	margin-bottom: 0px;
+}
+
+.escandalos .grid .escandalo-item span {
+	width: 100%;
+}
+
+.escandalos .grid .escandalo-item .share-holder {
+	float: left;
+	width: 100%;
+	border-top: 1px dotted #e5e5e5;
+	padding-top: 10px;
+}
+
+.escandalos .grid .escandalo-item h3 a {
+	color: #779A15;
+}
+
+.escandalos .grid .escandalo-item em {
+	float: left;
+	width: 100%;
+	background: none;
+	color: #333;
+	padding: 0;
+}
+
+.escandalos .grid .escandalo-item .badges {
+	width: auto;
+}
+
+.escandalos .grid .escandalo-item .photos {
+	margin-bottom: 20px;
+	float: left;
+	margin-top: 10px;
+}
+
+.escandalos .grid .escandalo-item .photos ul {
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.escandalos .grid .escandalo-item .photos ul li {
+	float: left;
+	list-style: none;
+	width: 71px;
+	height: 71px;
+	overflow: hidden;
+}
+
+.escandalos .grid .escandalo-item .photos img {
+	float: left;
+}
+
+.escandalos .grid .escandalo-item .see-more a {
+	float: right;
+	text-align: center;
+	background: url(../images/commom.jpg) 0px 0px repeat-x;
+	font-size: 13px;
+	color: white;
+	text-shadow: 1px 1px 2px #627B1E;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	padding-right: 7px;
+	padding-left: 7px;
+
+}
+
+.escandalos .content {
+	float: left;
+	padding-top: 0px !important;
+}
+
+
+
+/* inner content */
+
+.inner-content {
+    /*background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 5px #888888;
+    padding: 20px 10px 10px;
+    */float: left;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+
+.inner-content .share-holder {
+	float: right;
+	width: 200px;
+	margin-top: 10px;
+	display:none
+}
+
+.inner-content .share-holder .dislikes {
+	float: left;
+	color: #666;
+	font-weight: bold;
+	font-size: 14px;
+	background: url(../images/commom-icons.png) left -441px no-repeat;
+	padding-left: 30px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	cursor: pointer;
+}
+
+.inner-content em.date {
+	float: left;
+	font-weight: bold;
+	width: 100%;
+	margin-left: 10px;
+	font-style: normal;
+}
+
+.inner-content .basic-text {
+  border-bottom-color:#DDDDDD;
+  border-bottom-style:solid;
+  border-bottom-width:1px;
+  float:left;
+  margin-left:10px;
+  margin-top:30px;
+  padding-bottom:20px;
+  width:940px;
+}
+
+.inner-content .basic-text h4 {
+	float: left;
+	width: 100%;
+	font-size: 21px;
+	color: #696969;
+	margin: 0;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.inner-content .photos ul {
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.inner-content .photos ul li {
+	float: left;
+	list-style: none;
+	width: 71px;
+	height: 71px;
+	overflow: hidden;
+}
+
+.inner-content .photos img {
+	float: left;
+}
+
+.inner-content .photos {
+	margin-left: 10px;
+	margin-top: 20px;
+	float: left;
+}
+
+
+.inner-content .envolvidos {
+	float: left;
+	width: 940px;
+	margin-left: 10px;
+	margin-top: 20px;
+	border-bottom: 1px dotted #999;
+	padding-bottom: 20px;
+}
+
+
+.inner-content .envolvidos .users {
+	width: 280px;
+	float: left;
+}
+
+.inner-content .envolvidos .users ul {
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height:auto;
+	overflow:auto;
+	background: url(../images/escandalos-envolvidos.png) right top repeat-y;
+}
+
+.inner-content .envolvidos .users ul li {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	
+	float: left;
+	cursor: pointer;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.inner-content .envolvidos .users ul li.active {
+	background: url(../images/escandalos-envolvidos-active.png) right 10px no-repeat;
+}
+
+.inner-content .envolvidos .users ul li .photo {
+	width: 35px;
+	height:35px;
+	overflow: hidden;
+	float: left;
+}
+
+
+.inner-content .envolvidos .users ul li .photo img {
+	width: 35px;
+	height: 35px;
+	float: left;
+}
+
+.inner-content .envolvidos .users ul li strong {
+	float: left;
+	width: 220px;
+	margin-left: 10px;
+	color: #004B97;
+	text-transform: uppercase;
+}
+
+.inner-content .envolvidos .users ul li em {
+	float: left;
+	width: 220px;
+	margin-left: 10px;
+	color: #779A15;
+	font-style: normal;
+}
+
+.inner-content .envolvidos .users-content {
+	float: left;
+	width: 640px;
+	margin-left: 20px;
+	height: auto;
+	overflow: auto;
+}
+
+.inner-content .envolvidos .users-content .text {
+	width: 100%;
+	display: none;
+}
+
+
+
+
+
+.inner-content .frases-marcantes {
+ background-image: linear-gradient(to right, #FFFFFF 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 75%, #FFFFFF 100%), linear-gradient(to bottom, rgba(190, 190, 190, 0.75), rgba(190, 190, 190, 0) 2px), linear-gradient(to top, rgba(190, 190, 190, 0.75), rgba(190, 190, 190, 0) 2px);
+	    float: left;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+
+}
+
+.inner-content .frases-marcantes .frase {
+	width: 300px;
+	background: url(../images/frases-marcantes.png) left top no-repeat;
+	display:inline-block;
+	margin: 10px 0;
+	vertical-align:top
+}
+
+.inner-content .frases-marcantes .frase h5 {
+	color: #696969;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	width: 260px;
+	margin-left: 20px;
+}
+
+.inner-content .frases-marcantes .frase em {
+	float: left;
+	width: 260px;
+	color: #779A15;
+	margin-left: 20px;
+}
+
+.inner-content .frases-marcantes .frase .badges {
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+.inner-content .frases-marcantes .frase .badges .likes {
+	float: left;
+	color: #666;
+	font-weight: bold;
+	font-size: 14px;
+	background: url(../images/commom-icons.png) left -232px no-repeat;
+	padding-left: 30px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.inner-content .frases-marcantes .frase .badges .dislikes {
+	float: left;
+	color: #666;
+	font-weight: bold;
+	font-size: 14px;
+	background: url(../images/commom-icons.png) left -441px no-repeat;
+	padding-left: 30px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	cursor: pointer;
+}
+
+.inner-content .frases-marcantes h3 {
+	color: #0E569E;
+	font-size: 18px;
+	margin: 0;
+	margin-top: 30px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+.inner-content .casos-semelhantes {
+	padding-bottom: 30px;
+	float: left;
+	width: 100%;
+}
+
+.inner-content .casos-semelhantes .caso {
+	float: left;
+	width: 300px;
+	margin-right: 8px;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+.inner-content .casos-semelhantes .caso h5 {
+	color: #779a16;
+	font-size: 21px;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.inner-content .casos-semelhantes .caso strong {
+	float: left;
+	width: 100%;
+}
+
+.inner-content .casos-semelhantes .caso span {
+	margin-top: 10px;
+	float: left;
+	width: 100%;
+}
+/*
+.inner-content .casos-semelhantes h3 {
+	color: #0E569E;
+	font-size: 18px;
+	margin: 0;
+	margin-top: 30px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}*/
+
+.inner-content .envolvidosnovo {
+    float: left;
+    width: 910px;
+    margin-left: 10px;
+    margin-top: 20px;
+    /*border-bottom: 1px dotted #999;*/
+    padding-bottom: 20px;
+}
+
+
+.inner-content .envolvidosnovo .users {
+    width: 300px;
+    float: left;
+}
+
+.inner-content .envolvidosnovo .users ul {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.inner-content .envolvidosnovo .users ul li {
+    width: 96%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+border-bottom: 1px dotted #DDDDDD;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+
+.inner-content .envolvidosnovo .users ul li .photo {
+    width: 35px;
+    height:35px;
+    overflow: hidden;
+    float: left;
+}
+
+
+.inner-content .envolvidosnovo .users ul li .photo img {
+    width: 35px;
+    float: left;
+	font-size:8px
+}
+
+.inner-content .envolvidosnovo .users ul li strong {
+    float: left;
+    width: 220px;
+    margin-left: 10px;
+    color: #004B97;
+    font-weight:normal;
+	font-size:13px;
+	padding-top:8px
+}
+.inner-content .envolvidosnovo .users ul li strong a {
+	color:#666;
+}
+.inner-content .envolvidosnovo .users ul li strong a:hover {
+	 background:#ddd
+}
+.inner-content .envolvidosnovo .users ul li strong a:hover { text-decoration:none}
+.inner-content .envolvidosnovo .users ul li em {
+    float: left;
+    width: 220px;
+    margin-left: 10px;
+    color: #779A15;
+    font-style: normal;
+}
+
+.inner-content .envolvidosnovo .users-content {
+    float: left;
+    width: 640px;
+    margin-left: 20px;
+    height: 250px;
+    overflow: auto;
+}
+
+.inner-content .envolvidosnovo .users-content .text {
+    width: 100%;
+    display: none;
+}
+
+
+.inner-content .envolvidosnovo h3 {
+    color: #0E569E;
+    font-size: 25px !important;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #0E569E;
+    font-size: 18px !important;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* - - - - - - - - - - - - - CORRUP��O PAINEL - - - - - - - - - - - - - -*/
+
+
+    ul.container{
+        /* The main UL */
+        width:100%;
+        margin:0 auto;
+    }
+
+
+
+hr.fancy-line {
+    border: 0;
+    height: 1px;
+    position: relative;
+    margin: 0.5em 0; /* Keep other elements away from pseudo elements*/
+}
+hr.fancy-line:before {
+    top: -0.5em;
+    height: 1em;
+}
+hr.fancy-line:after {
+    content:'';
+    height: 0.5em;   /* half the height of :before */
+    top: 1px;        /* height of hr*/
+}
+
+hr.fancy-line:before, hr.fancy-line:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+}
+
+hr.fancy-line, hr.fancy-line:before {
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 75%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 75%, color-stop(0%,rgba(0,0,0,0.1)), color-stop(75%,rgba(0,0,0,0)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 75%);
+}
+

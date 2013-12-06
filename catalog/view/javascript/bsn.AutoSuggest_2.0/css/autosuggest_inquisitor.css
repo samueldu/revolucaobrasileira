@@ -1,0 +1,192 @@
+/* 
+================================================
+autosuggest, inquisitor style
+================================================
+*/
+
+body
+{
+	position: relative;
+}
+
+
+div.autosuggest
+{
+	position: fixed;
+	background-image: url(img_inquisitor/as_pointer.gif);
+	background-position: top;
+	background-repeat: no-repeat;
+	padding: 7px 0 0 0;
+	z-index:210000;
+	border-bottom:1px solid #ccc;
+}
+
+div.autosuggest div.as_header,
+div.autosuggest div.as_footer
+{
+	position: relative;
+	height: 6px;
+	padding: 0 6px;
+	background-image: url(img_inquisitor/ul_corner_tr.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	display:none /* TIAGO ESCONDEU */
+	
+}
+div.autosuggest div.as_footer
+{
+	background-image: url(img_inquisitor/ul_corner_br.gif);
+}
+
+div.autosuggest div.as_header div.as_corner,
+div.autosuggest div.as_footer div.as_corner
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 6px;
+	width: 6px;
+	background-image: url(img_inquisitor/ul_corner_tl.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+	display:none /* TIAGO ESCONDEU */
+}
+div.autosuggest div.as_footer div.as_corner
+{
+	background-image: url(img_inquisitor/ul_corner_bl.gif);
+	display:none /* TIAGO ESCONDEU */	
+}
+div.autosuggest div.as_header div.as_bar,
+div.autosuggest div.as_footer div.as_bar
+{
+	height: 6px;
+	overflow: hidden;
+	background-color: #333;
+	display:none /* TIAGO ESCONDEU */
+}
+
+
+div.autosuggest ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	max-height:500px;
+	-moz-box-shadow: 0 2px 4px #888;
+	-webkit-box-shadow: 0 2px 4px #888;
+	box-shadow:	 0 2px 4px #888
+}
+
+div.autosuggest ul li
+{
+	color: #ccc;
+	padding: 0;
+	margin: 0 0 0;
+	text-align: left;
+	float:left; width:100%
+}
+
+div.autosuggest ul li a
+{
+	color: #333;
+	display: block;
+	text-decoration: none;
+	background-color: #ededed;
+	position: relative;
+	padding: 5px 0;
+	width: 100%;
+	font-size:11px;
+	border-top:1px solid #ccc;
+
+}
+div.autosuggest ul li a:hover
+{
+	background-color: #444;
+}
+div.autosuggest ul li.as_highlight a:hover
+{
+	background-color: #4273a4;
+}
+
+div.autosuggest ul li a span
+{
+	display: block;
+	padding: 3px 6px;
+	
+}
+
+div.autosuggest ul li a span small
+{
+	font-weight: normal;
+	color: #999;
+	display:none
+}
+
+div.autosuggest ul li.as_highlight a span small
+{
+	color: #ccc; 
+}
+
+div.autosuggest ul li.as_highlight a
+{
+	color: #fff;
+	background-color: #ddd;
+}
+
+/*div.autosuggest ul li.as_highlight a span
+{
+	background-image: url(img_inquisitor/hl_corner_bl.gif);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}*/
+
+div.autosuggest ul li a .tl,
+div.autosuggest ul li a .tr
+{
+	background-image: transparent;
+	background-repeat: no-repeat;
+	width: 6px;
+	height: 6px;
+	position: absolute;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	display:none /* TIAGO ESCONDEU */
+}
+
+div.autosuggest ul li a .tr
+{
+	right: 0;
+	display:none /* TIAGO ESCONDEU */
+}
+
+div.autosuggest ul li.as_highlight a .tl
+{
+	left: 0;
+	/*background-image: url(img_inquisitor/hl_corner_tl.gif);
+	background-position: bottom left;*/
+}
+
+div.autosuggest ul li.as_highlight a .tr
+{
+	right: 0;
+	display:none /* TIAGO ESCONDEU */
+	/*background-image: url(img_inquisitor/hl_corner_tr.gif);
+	background-position: bottom right;*/
+}
+
+
+
+div.autosuggest ul li.as_warning
+{
+	font-weight: bold;
+	text-align: center;
+}
+
+div.autosuggest ul em
+{
+	font-style: normal;
+	color: #6EADE7;
+}

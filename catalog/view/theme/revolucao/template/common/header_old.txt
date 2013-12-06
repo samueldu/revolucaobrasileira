@@ -1,0 +1,127 @@
+<div id="wrap">
+	
+	<div id="header">                
+		
+		<form method="post" class="searchform" action="#">     
+		
+			<p>
+			
+			<?php if ($keyword) { ?>     
+			<input type="text" name="filter_keyword" value="<?php echo $text_keyword; ?>" id class="textbox" id="filter_keyword" />    
+			
+			<?php
+			}
+			else
+			{
+			?>
+			   <input type="text" value="<?php echo $text_keyword; ?>" id="filter_keyword" onclick="this.value = '';"  onkeydown="this.style.background = '#FFF'" />
+		
+			<?php
+			}
+			?>
+			
+   
+			  <input type="submit" name="search" class="button" value="Search" onclick="moduleSearch();" />
+			  <BR><a href="<?php echo str_replace('&', '&amp;', $advanced); ?>" class="avancada"><?php echo $text_advanced; ?></a>  </p>
+		</form>
+			
+		<!-- Menu Tabs -->
+		<ul>
+			<li id="current"><a href="index.html"><span>Home</span></a></li>
+			<li><a href="conteudo/absurdo"><span>Absurdos</span></a></li>
+			<li><a href="conteudo/documentarios"><span>Documentários</span></a></li>
+			<li><a href="politico/politico"><span>Politicos do Brasil</span></a></li>
+			<li><a href="conteudo/iniciativa"><span>Iniciativa Popular</span></a></li>
+			<li><a href="conteudo/corrupcao"><span>Corrupção</span></a></li>            
+			<li><a href="account/account"><span>Minha conta</span></a></li> 
+			<li><a href="materias/materias?materia_id=500"><span>Materias</span></a></li>      
+		</ul>    
+													
+	</div>    
+
+	  
+	 
+
+
+	
+<?php 
+if(is_array($banner))
+{
+?>      <div class="div6" style="overflow: hidden;">       
+	<div id="featured"> 
+	<?php 
+	foreach($banner as $key=>$value)
+	{
+	?>
+	<a href="<?=$banner[$key]['url']?>" rel="nofollow"><img src="<?=HTTP_IMAGE.$banner[$key]['urlImg']?>" rel="<?php $banner[$key]['id']?>"  ALT="<?=$banner[$key]['nome']?>"   title="<?=$banner[$key]['nome']?>" border="0" /></a>
+	<?php 
+	}
+	?>  
+	</div> 
+<?php 
+}   
+?>
+
+
+		<?php if (isset($common_error)) { ?>
+	  <div class="center" style="overflow:auto">
+		<div class="warning"><?php echo $common_error; ?></div></div>
+		<?php }
+		
+		
+		
+		
+		
+		if(count($breadcrumbs) > 0)
+		{
+		
+		?>
+		<div id="breadcrumb" class="<?php if(trim($rota) == 'product/product'){ echo "breadcrumb_product"; }?>" >
+		  <?php
+		  $i = 0; 
+		  foreach ($breadcrumbs as $breadcrumb) { $i++;?>
+		  <?php echo $breadcrumb['separator']; ?><a href="<?php echo str_replace('&', '&amp;', $breadcrumb['href']); ?>">
+			<?php if($i == count($breadcrumbs)){?>
+			<h1><?php echo $breadcrumb['text']; ?></h1>
+			<?php }else{ ?>
+			<span><?php echo $breadcrumb['text']; ?></span>
+			<?php } ?>
+			
+		  </a>
+		  <?php }
+		  ?>
+
+		</div>
+		
+		<?php 
+		}  
+		?>
+
+
+
+  <script type="text/javascript"><!--
+   $('#filter_keyword').keydown(function(e) {
+	if (e.keyCode == 13) {
+		moduleSearch();
+	}
+});
+
+function moduleSearch() {
+	url = '<?=$url?>product/search';
+	
+	var filter_keyword = $('#filter_keyword').attr('value')
+	
+	if (filter_keyword) {
+		url += '?keyword=' + encodeURIComponent(filter_keyword);
+	}
+	
+	var filter_category_id = $('#filter_category_id').attr('value');
+	
+	if (filter_category_id) {
+		url += '&category_id=' + filter_category_id;
+	}
+	
+	window.location = url;
+}
+
+//--></script>

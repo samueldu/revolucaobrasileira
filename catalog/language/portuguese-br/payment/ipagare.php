@@ -1,0 +1,5 @@
+<?php
+// Text
+$_['text_title'] = 'iPagare Gr&aacute;tis Pagamento Online';
+$_['text_boleto'] = "Opção válida apenas para pagamentos à vista. Condições: Somar 2 dias úteis ao prazo de entrega informado no site. Esse é o prazo máximo estipulado pelo banco para a confirmação de pagamento. Em pagamento do boleto com cheque, somar 3 dias úteis. A identificação do pagamento é automática, sendo assim não é preciso entrar em contato via telefone ou enviar-nos qualquer notificação sobre o pagamento realizado. Atenção: caso você tenha um programa anti pop-up, você deverá desativá-lo antes de finalizar sua compra com esta forma de pagamento.";
+?>

@@ -1,0 +1,24 @@
+<?php
+$_['heading_title'] = 'SEO';
+$_['text_success'] = 'SEO Aplicado!';
+$_['text_module'] = 'módulos';
+$_['back'] = 'Voltar';
+$_['warning_clear'] = 'Aviso: as informações antigas de SEO serão sobreescritas.';
+$_['categories'] = 'Categorias:';
+$_['products'] = 'Produtos:';
+$_['generate'] = 'Gerar!';
+$_['error_permission'] = 'Aviso: voc� n�o tem permissão para acessar esse módulo.!';
+$_['append_model'] = 'Adicionar modelo';
+$_['manufacturers'] = 'Marcas:';
+$_['template'] = 'Url Amigável:';
+$_['template_meta'] = 'Url Amig�vel:';
+$_['available_category_tags'] = 'Tags disponíveis: [category_name]';
+$_['available_product_tags'] = 'Tags disponíveis: [product_name], [model_name]';
+$_['available_manufacturer_tags'] = 'Tags disponíveis: [manufacturer_name]';
+$_['available_meta_tags'] = 'Tags disponíveis: [product_name], [model_name], [manufaturer_name], [categories_names]';
+$_['meta_keywords'] = 'Meta keywords:';
+$_['add_from_yahoo'] = 'Adicionar termos usando o extrator de termos do Yahoo.';
+$_['your_yahoo_id'] = 'Yahoo! Application ID';
+$_['get_yahoo_id'] = 'Consiga uma <a href="http://developer.yahoo.com/wsregapp/" target="_blank">aqui</a>. Escolha Modo Generico de Autenticacao.';
+$_['enter_yahoo_id'] = 'Please enter your Yahoo! Application ID if you want to use the Yahoo! Term extraction service!';
+$_['curl_not_enabled'] = 'Please enable the cURL extension if you want to use the Yahoo! Term extraction service.';

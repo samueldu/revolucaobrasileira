@@ -1,0 +1,104 @@
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<script src="../parser_rules/advanced.js" ></script>
+	<script src="../dist/wysihtml5-0.3.0.js" ></script>
+	  <body>
+	  <form name="editor" id="editor">
+		<BR>
+		<div id="wysihtml5-editor-toolbar">
+		  <header>
+			<ul class="commands">
+			  <li data-wysihtml5-command="bold" title="Negrito (CTRL + B)" class="command"></li>
+			  <li data-wysihtml5-command="italic" title="Itálico (CTRL + I)" class="command"></li>
+			  <li data-wysihtml5-command="insertUnorderedList" title="Marcadores" class="command"></li>
+			  <li data-wysihtml5-command="insertOrderedList" title="Numeração" class="command"></li>
+			  <li data-wysihtml5-command="createLink" title="Inserir um link" class="command"></li>   
+			  <li data-wysihtml5-command="insertImage" title="Inserir uma imagem" class="command"></li>
+			  <li data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1" title="Inserir Título" class="command"></li>
+			  <li data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h2" title="Inserir Sub-Título" class="command"></li>
+			  <li data-wysihtml5-command-group="foreColor" class="fore-color" title="Cor do texto selecionado" class="command">
+				<ul>
+				  <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="silver"></li>
+				  <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="gray"></li>
+				  <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="maroon"></li>
+				  <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red"></li>
+				  <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="purple"></li>
+				  <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="green"></li>
+				  <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="olive"></li>
+				  <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="navy"></li>
+				  <li data-wysihtml5-command="foreColor" data-wysihtml5-command-value="blue"></li>
+				</ul>
+			  </li>
+			  <li data-wysihtml5-command="insertSpeech" title="Insert speech" class="command"></li>
+			  <!--li data-wysihtml5-action="change_view" title="Ver HTML" class="action"></li-->
+			</ul>
+		  </header>
+		  <div data-wysihtml5-dialog="createLink" style="display: none;">
+			<label>URL : <input data-wysihtml5-dialog-field="href" value="http://www.">
+			</label>
+			<a data-wysihtml5-dialog-action="save">OK</a>&nbsp;<a data-wysihtml5-dialog-action="cancel">Cancelar</a>
+		  </div>
+		
+		  <div data-wysihtml5-dialog="insertImage" style="display: none;">
+			<label>URL da imagem: <input data-wysihtml5-dialog-field="src" value="http://">
+			</label>
+			<label>
+			Alinhamento:
+			<select data-wysihtml5-dialog-field="className">
+			  <option value="">Sem alinhamento</option>
+			  <option value="wysiwyg-float-left">Esquerda</option>
+			  <option value="wysiwyg-float-right">Direita</option>
+			</select>
+		  </label>
+			
+			<a data-wysihtml5-dialog-action="save">OK</a>&nbsp;<a data-wysihtml5-dialog-action="cancel">Cancelar</a>
+		  </div>
+		</div>
+		
+		<section>
+		  <textarea id="wysihtml5-editor" spellcheck="false" wrap="off" autofocus placeholder="Enter something ...">  
+	<?=utf8_encode("<h1>Título do artigo (h1)</h1>
+	<p>Ao escrever seja claro para melhor compreensão. utilize <b>negrito</b> e <i>itálico</i> para diferenciar o texto corretamente</p>
+	<h2>Sub-titulo (h2)</h2>	
+	<ul>	   
+		<li>O sistema irá linkar os endereços de web enquanto você os escreve.</li>	  
+		<li>Já escreveu um texto no Word? Copie e cole!</li>  	
+		<li>Cole uma URL do Youtube e o vídeo será automaticamente inserido!</li>      
+	</ul>")?>
+	 
+		  </textarea>
+		</section>
+		<script>
+		  var editor = new wysihtml5.Editor("wysihtml5-editor", {
+		  
+			// Id of the toolbar element, pass falsey value if you don't want any toolbar logic  
+			toolbar:     "wysihtml5-editor-toolbar",
+			// Array (or single string) of stylesheet urls to be loaded in the editor's iframe  
+			stylesheets: ["http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css", "css/editor.css"],
+			// Object which includes parser rules (set this to examples/rules/spec.json or your own spec, otherwise only span tags are allowed!) 
+			parserRules: wysihtml5ParserRules,
+			// Give the editor a name, the name will also be set as class name on the iframe and on the iframe's body
+			name:                 null,
+			// Whether the editor should look like the textarea (by adopting styles)
+			style:                true,
+			// Whether urls, entered by the user should automatically become clickable-links
+			autoLink:             true,
+			// Parser method to use when the user inserts content via copy & paste
+			parser:               wysihtml5.dom.parse || Prototype.K,
+			// Class name which should be set on the contentEditable element in the created sandbox iframe, can be styled via the 'stylesheets' option
+			composerClassName:    "wysihtml5-editor",
+			// Class name to add to the body when the wysihtml5 editor is supported
+			bodyClassName:        "wysihtml5-supported",
+			// Array (or single string) of stylesheet urls to be loaded in the editor's iframe
+			placeholderText:      null,
+			// Whether the composer should allow the user to manually resize images, tables etc.
+			allowObjectResizing:  true,
+			// Whether the rich text editor should be rendered on touch devices (wysihtml5 >= 0.3.0 comes with basic support for iOS 5)
+			supportTouchDevices:  true
+		  });
+		  
+		  editor.on("load", function() {
+			var composer = editor.composer;
+			composer.selection.selectNode(editor.composer.element.querySelector("h1"));
+		  });
+		</script>
+	  </body>

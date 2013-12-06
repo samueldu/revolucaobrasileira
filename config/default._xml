@@ -1,0 +1,32 @@
+<config>
+	<local>
+		<loja>
+			<name>Revolucao</name>
+			<logo>http://{base_url}/opencart/image/data/bongs-pipes-logo.png</logo>
+			<base_dir>G:/projeto/VertrigoServ224/www/revolucaobrasileira/rb/</base_dir>
+			<base_url>http://{base_url}/revolucaobrasileira/rb/</base_url>
+			<template>revolucao</template>
+		</loja>
+		<database>
+			<host>localhost</host>
+			<base>revolucao</base>
+			<user>root</user>
+			<pass>vertrigo</pass>
+		</database>
+	</local>
+	<public>
+		<loja>
+			<name>REV</name>
+			<logo>http://store.globalwebmasters.com/upload/image/data/bongs-pipes-logo.png</logo>
+			<base_dir>/home/revoluca/</base_dir>
+			<base_url>http://www.revolucaobrasileira.com.br/</base_url>
+			<template>revolucao</template>
+		</loja>
+		<database>
+			<host>localhost</host>
+			<base>revoluca_banco</base>
+			<user>revoluca_revolucao</user>
+			<pass><![CDATA[}6^,(/9<vL-7~5L]]></pass>
+		</database>
+	</public>
+</config>

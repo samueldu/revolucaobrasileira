@@ -1,0 +1,22 @@
+RewriteEngine On
+RewriteBase /
+
+# This will prevent redirect loop for the below three RewriteRule.
+RewriteCond %{ENV:REDIRECT_STATUS} 200
+RewriteRule .* - [L]
+
+# E.g external redirect /index.php?route=common/home to /common/home
+# X-Requested-With (http header created by jQuery.load()) prevent this rule from AJAX request E.g Get product/product/review when open product details.
+RewriteCond %{HTTP:X-Requested-With} !XMLHttpRequest [NC]
+RewriteCond %{QUERY_STRING} ^route=([a-z-_/]+)$ [NC]
+RewriteRule ^index\.php %1/? [R=301,L]
+
+# E.g external redirect /index.php?route=product/product&product_id=8 to /product/product?product_id=8
+RewriteCond %{HTTP:X-Requested-With} !XMLHttpRequest [NC]
+RewriteCond %{QUERY_STRING} ^route=([a-z-_/]+)\&(.*)$ [NC]
+RewriteRule ^index\.php %1/?%2 [R=301,L]
+
+# E.g internal redirect /common/home to /index.php?route=common/home
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^?]*)/$|^([^?]*)$ index.php?_route_=$1$2 [L,QSA]
